@@ -19,13 +19,13 @@
     width: 80px; /* Logo size */
 }
 
-.navbar .rightside {
+.navbar .rightside { /* Ensure this matches the JSX class name */
     flex: 80%; /* Increased flex for more space */
     height: 100%; /* Full height of the navbar */
     display: flex;
-    align-items: center; /* Align items to the bottom */
+    align-items: center; /* Center items vertically */
     justify-content: flex-end; /* Align links to the right */
-    padding-right: 20px; /* Right padding */
+    padding-left: 30px; /* Right padding */
 }
 
 .navbar a {
@@ -34,41 +34,41 @@
     margin: 10px; /* Reduced margin for better spacing */
 }
 
-.navbar .rightSide button {
+.navbar .rightside button { /* Ensure this matches the JSX class name */
     background-color: transparent;
     border: none;
     color: white;
     cursor: pointer;
 }
 
-.navbar .rightSide svg {
+.navbar .rightside svg { /* Ensure this matches the JSX class name */
     font-size: 40px;
 }
 
 /* Existing media queries remain unchanged */
 @media only screen and (max-width: 900px) {
-    .navbar .rightSide a {
+    .navbar .rightside a {
         width: 70px;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .navbar .rightSide a {
+    .navbar .rightside a {
         display: none; /* Hides links on smaller screens */
     }
 
-    .navbar .rightSide {
+    .navbar .rightside {
         justify-content: flex-end;
         padding-right: 50px;
     }
 
-    .navbar .rightSide button {
+    .navbar .rightside button {
         display: inherit;
     }
 }
 
 @media only screen and (min-width: 600px) {
-    .navbar .rightSide button {
+    .navbar .rightside button {
         display: none;
     }
 
@@ -76,3 +76,105 @@
         display: none;
     }
 }
+.navbar {
+    width: 100%;
+    height: 100px;
+    background-color: #121619;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .navbar .leftSide {
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+  }
+  
+  .navbar .leftSide img {
+    width: 70px;
+  }
+  
+  .navbar .rightSide {
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+  }
+  
+  .navbar .rightSide button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .navbar .rightSide svg {
+    font-size: 40px;
+  }
+  
+  .navbar #open {
+    padding-left: 0px;
+  }
+  .navbar #open img {
+    display: none;
+  }
+  
+  .navbar #close img {
+    display: inherit;
+  }
+  
+  .navbar #open .hiddenLinks {
+    display: inherit;
+    margin-left: 30px;
+  }
+  
+  .navbar #close .hiddenLinks {
+    display: none;
+  }
+  
+  .navbar #open a {
+    width: 70px;
+    margin: 5px;
+  }
+  @media only screen and (max-width: 900px) {
+    .navbar .rightSide a {
+      width: 70px;
+    }
+    .navbar .leftSide {
+      padding-left: 50px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .navbar .rightSide a {
+      display: none;
+    }
+  
+    .navbar .rightSide {
+      justify-content: flex-end;
+      padding-right: 50px;
+    }
+  
+    .navbar .rightSide button {
+      display: inherit;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .navbar .rightSide button {
+      display: none;
+    }
+  
+    .hiddenLinks {
+      display: none;
+    }
+  }
